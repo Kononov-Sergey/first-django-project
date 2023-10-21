@@ -7,4 +7,5 @@ urlpatterns = [
     path("polls/", include("django.contrib.auth.urls")),
     path("polls/", include("polls.urls")),
     path("admin/", admin.site.urls),
+    path("", include("allauth.urls")),
 ]

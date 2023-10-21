@@ -1,5 +1,8 @@
 {% load static %}
 
+{% load socialaccount %}
+
+
 <link rel="stylesheet" href="{% static 'polls/style.css' %}">
 
 <header class="main-header">
@@ -9,6 +12,9 @@
     <a href="{% url 'polls:login' %}">Login</a>
   {% endif %}
   <a href="/admin">Admin</a>
+  <a href="/google/login/?next=/">
+    Login with Google
+  </a>
 </header>
 
 {% if user.is_authenticated %}
