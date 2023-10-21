@@ -1,0 +1,25 @@
+{% if messages %}
+  {% for message in messages %}
+    {{message}}
+  {% endfor %}
+{% endif %}
+
+
+<h1>Login</h1>
+<br/>
+<form action="" method=POST>
+  {% csrf_token %}
+
+  <form>
+    <div>
+      <label class="form-label">Username</label>
+      <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+    </div>
+    <div>
+      <label  class="form-label">Password</label>
+      <input type="password" class="form-control" name="password">
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-secondary">
+
+  </form>
